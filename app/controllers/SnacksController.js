@@ -1,10 +1,12 @@
 import { AppState } from "../AppState.js"
 import { snackService } from "../services/SnackService.js"
+import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
 export class SnacksController {
     constructor() {
         AppState.on('mySnacks', _drawSnacksInventory)
+        AppState.on('snacks', _drawSnacks)
         _drawSnacks()
     }
 
