@@ -46,7 +46,7 @@ export const router = [
           <!-- SNACKS POPULATE HERE -->
           </section>
         </div>
-        <div class="col-4">
+        <div class="col-4 p-5">
           <section class="row justify-content-around">
           
             <div class="col-12 text-center fs-2">
