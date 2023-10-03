@@ -3,6 +3,7 @@ import { SnacksController } from "./controllers/SnacksController.js";
 import { MoneyController } from "./controllers/MoneyController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
+import { KeypadController } from "./controllers/KeypadController.js";
 // import { HomeController } from "./controllers/HomeController.js";
 
 
@@ -10,7 +11,7 @@ export const router = [
   {
     path: '',
 
-    controller: [SnacksController, MoneyController],
+    controller: [SnacksController, MoneyController, KeypadController],
 
     view: /*html*/`
     <div class="container-fluid">
@@ -39,8 +40,78 @@ export const router = [
         </div>
       </section>
 
-      <section id="snack-dump" class="row p-4">
-        <!-- CARDS POPULATE HERE-->
+      <section class="row">
+        <div class="col-8">
+          <section id="snack-dump" class="row p-2">
+          <!-- SNACKS POPULATE HERE -->
+          </section>
+        </div>
+        <div class="col-4">
+          <section class="row justify-content-around">
+          
+            <div class="col-12 text-center fs-2">
+              <p id="codeElem">Code: </p>
+            </div>
+
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('A')" class="btn btn-secondary keypad-button">
+                <p>A</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('B')" class="btn btn-secondary keypad-button">
+                <p>B</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('C')" class="btn btn-secondary keypad-button">
+                <p>C</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('1')" class="btn btn-dark keypad-button">
+                <p>1</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('2')" class="btn btn-dark keypad-button">
+                <p>2</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('3')" class="btn btn-dark keypad-button">
+                <p>3</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('4')" class="btn btn-dark keypad-button">
+                <p>4</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('5')" class="btn btn-dark keypad-button">
+                <p>5</p>
+              </button>
+            </div>
+            <div class="col-4 p-0">
+              <button onclick="app.KeypadController.keyPressed('6')" class="btn btn-dark keypad-button">
+                <p>6</p>
+              </button>
+            </div>
+
+            <div class="col-6 p-0">
+              <button onclick="app.KeypadController.resetCode()" class="btn btn-danger keypad-button">
+                <p>Reset Code</p>
+              </button>
+            </div>
+            <div class="col-6 p-0">
+              <button onclick="app.KeypadController.submitCode()" class="btn btn-success keypad-button">
+                <p>Submit Code</p>
+              </button>
+            </div>
+
+          </section>
+        </div>
       </section>
 
       <section class="row mt-3 border-secondary border-bottom bg-dark align-items-center p-2 text-white">
