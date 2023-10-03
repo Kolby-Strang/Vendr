@@ -1,1 +1,31 @@
 /* BASIC STYLES HERE */
+p {
+    margin-bottom: 0;
+}
+
+button {
+    margin: .5em;
+}
+
+.card {
+    background-color: black;
+    color: white;
+    padding: 0;
+}
+
+.card>img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+.miniCard {
+    padding: .25em;
+}
+
+.miniCard>img {
+    object-fit: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 5px;
+}
